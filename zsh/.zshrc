@@ -37,7 +37,7 @@ path=(
 
 autoload -U colors && colors
 #PS1="%? %{$fg[blue]%}%m %{$fg[yellow]%}%~%{$reset_color%}%% "
-PS1="%{$fg[yellow]%}%~%{$reset_color%}%% "
+PS1="%{$fg[yellow]%}%m %~%{$reset_color%}%% "
 
 #PROMPT='%{$fg[yellow]%}%~%{$fg[blue]%}$(git_prompt_info)%{$fg[yellow]%}$%{$reset_color%} '
 #
