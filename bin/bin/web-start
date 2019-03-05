@@ -1,0 +1,3 @@
+#brew services start nginx
+brew services start mongodb
+brew services start redis

@@ -1,0 +1,164 @@
+scriptencoding utf-8
+
+if !has('nvim')
+  unlet! skip_defaults_vim
+  source $VIMRUNTIME/defaults.vim
+endif
+
+if has('nvim')
+  call plug#begin('~/.local/share/nvim/plugged')
+else
+  call plug#begin('~/.vim/plugged')
+endif
+
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+
+Plug 'sgur/vim-editorconfig'
+
+Plug 'arcticicestudio/nord-vim'
+
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-unimpaired'
+"Plug 'tpope/vim-eunuch' ":SudoWrite
+Plug 'tpope/vim-repeat'
+
+Plug 'markonm/traces.vim'
+Plug 'michaeljsmith/vim-indent-object'
+
+"Plug 'Yggdroot/indentLine'
+let g:indentLine_char = '|'
+
+" Plug 'scrooloose/nerdtree'
+" autocmd vimenter * NERDTree
+" autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+" let g:NERDTreeAutoDeleteBuffer = 1
+" let g:NERDTreeMinimalUI = 1
+" let g:NERDTreeDirArrows = 1
+" let g:NERDTreeStatusline = 'NERD>'
+" let g:NERDTreeIgnore = ['.DS_Store']
+
+" Plug 'justinmk/vim-dirvish'
+
+" Plug 'digitaltoad/vim-pug'
+
+call plug#end()
+
+
+set nobackup
+set nowritebackup
+set noswapfile
+
+set fileencodings=ucs-bom,utf-8,korea,default,latin1
+set termencoding=utf8
+
+set laststatus=2
+set statusline=
+set statusline+=%03.3n\  "buffer number
+set statusline+=%<        "truncate if long
+set statusline+=%f\       "filename
+set statusline+=%h%m%r    "flag
+set statusline+=%=        "right align remainder
+set statusline+=%-14.(%l,%c%V%)\   "line, char
+set statusline+=%P        "file position
+
+"set clipboard=unnamed
+
+set mouse=a
+
+set tabstop=2
+set autoindent
+set nocindent
+set shiftwidth=2
+set expandtab
+set smarttab
+
+set textwidth=80
+
+set list
+set listchars=tab:\|\ ,trail:·
+
+"set number
+set relativenumber
+
+set cursorline
+"set cursorcolumn
+
+set nowrap
+
+set selection=exclusive
+
+set hlsearch
+set incsearch
+" set nowrapscan
+
+" Buffers
+set hidden
+
+" Color
+colorscheme nord
+syntax on
+
+" comment
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+
+" fzf
+let $FZF_DEFAULT_COMMAND= 'rg --files'
+let g:fzf_layout = { 'down': '~100%' }
+
+" netrw
+let g:netrw_liststyle = 3
+let g:netrw_banner = 0
+let g:netrw_list_hide= '.DS_Store'
+
+" match
+"runtime macros/matchit.vim
+
+
+" Keymaps
+
+let mapleader = " "
+
+nnoremap <Leader>c :cd %:p:h<CR>:pwd<CR>
+
+"nnoremap <Leader>r :source $MYVIMRC<CR>
+nnoremap <Leader>r :source $MYVIMRC<CR>
+nnoremap <Leader>R :e ~/.vim/vimrc<CR>
+
+nnoremap <C-p> :Files<CR>
+nnoremap <Leader>F :GFiles<CR>
+nnoremap <Leader>b :Buffers<CR>
+
+nnoremap <Leader>e :e.<CR>
+
+nnoremap <Leader>s :mksession!<CR>
+
+nnoremap <Leader>T :e ~/.tmux.conf<CR>
+
+" nnoremap <Leader>n :NERDTreeToggle<CR>
+" nnoremap <Leader>N :NERDTreeFind<CR>
+
+":nnoremap <Leader>v :Dirvish<CR>
+
+nnoremap <C-h> <C-w><C-w>
+nnoremap <C-j> :bprevious<CR>
+nnoremap <C-k> :bnext<CR>
+
+nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
+
+nnoremap <C-w>4 :resize 40<CR>
+nnoremap <C-w>5 :resize 50<CR>
+
+nnoremap gh :buffer #<CR>
+nnoremap gl :ls<CR>:b<space>
+
+"vnoremap <C-c> "+y
+"nnoremap + "*
+"vnoremap + "*
+
+nnoremap Y "*y
+vnoremap Y "*y
+
+imap fj <Esc>
+

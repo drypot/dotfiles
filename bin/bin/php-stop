@@ -1,0 +1,4 @@
+brew services stop nginx
+brew services stop php70
+#brew services stop mongodb
+#brew services stop redis

@@ -1,0 +1,10 @@
+#!/bin/sh
+find "$1" -name "$2" | while read filename
+do
+
+  tempName=${filename}~temp~.txt
+  mv "$filename" "$tempName"
+  iconv -c -f euc-kr -t utf-8 "$tempName" > "$filename"
+  rm "$tempName"
+
+done
