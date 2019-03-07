@@ -1,35 +1,46 @@
 [user]
-	name = drypot
-	email = drypot@gmail.com
+  name = drypot
+  email = drypot@gmail.com
+
 [color]
-	ui = auto
+  ui = auto
+
 [github]
-	user = drypot
+  user = drypot
+
 [core]
-	excludesfile = /Users/drypot/.gitignore_global
-	precomposeunicode = true
+  excludesfile = /Users/drypot/.gitignore_global
+  precomposeunicode = true
+
 [difftool "Kaleidoscope"]
-	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+  cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+
 [difftool]
-	prompt = false
+  prompt = false
+
 [diff]
-	tool = Kaleidoscope
-[mergetool "sourcetree"]
-	cmd = /private/var/folders/cn/0b42krj91hs18clpcnqw4rmc0000gn/T/AppTranslocation/60C902E9-76AA-481E-9BA6-A71C4153B7C0/d/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
+  tool = Kaleidoscope
+
 [push]
-	default = simple
+  default = simple
+
 [credential]
-	helper = osxkeychain
+  helper = osxkeychain
+  helper = cache --timeout 3600
+
 [filter "lfs"]
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
-	clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+  required = true
+  clean = git-lfs clean -- %f
+
 [difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path =
+  cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+  path =
+
 [commit]
-	template = /Users/drypot/.stCommitMsg
+  template = /Users/drypot/.stCommitMsg
+
 [merge]
-	tool = vim
+  tool = vim
+
