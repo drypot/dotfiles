@@ -160,5 +160,5 @@ nnoremap gl :ls<CR>:b<space>
 nnoremap Y "*y
 vnoremap Y "*y
 
-imap fj <Esc>
+imap jj <Esc>
 
