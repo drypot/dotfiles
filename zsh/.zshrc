@@ -46,6 +46,11 @@ PS1="%{$fg[yellow]%}%m %~%{$reset_color%}%% "
 #ZSH_THEME_GIT_PROMPT_DIRTY="✗"
 #ZSH_THEME_GIT_PROMPT_CLEAN="✔"
 
+precmd() {
+  # sets the tab title to current dir
+  echo -ne "\e]1;${PWD##*/}\a"
+}
+
 setopt ignore_eof
 
 bindkey -e
