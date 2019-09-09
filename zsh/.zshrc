@@ -84,5 +84,18 @@ alias gs="git status"
 alias ga="git add ."
 alias gc="git commit -m"
 
+
+case "$OSTYPE" in
+  darwin*)
+    export JAVA_HOME=`/usr/libexec/java_home`
+  ;;
+  linux*)
+    # ...
+  ;;
+  dragonfly*|freebsd*|netbsd*|openbsd*)
+    # ...
+  ;;
+esac
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 

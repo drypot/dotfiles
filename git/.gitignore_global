@@ -1,20 +1,12 @@
 .DS_Store
 
-.vscode
+Session.vim
+.netrwhist
 
 .idea
 .iml
 
 *.sublime-workspace
 
-Session.vim
-.netrwhist
+.vscode
 
-*~
-\#*\#
-.emacs.desktop
-.emacs.desktop.lock
-*.elc
-auto-save-list
-tramp
-.\#*

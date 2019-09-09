@@ -1,0 +1,6 @@
+#!/bin/sh
+for file in *.pdf *.epub;
+do
+    echo "$file"
+    mv "$file" "${file#* - }"
+done

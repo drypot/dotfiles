@@ -12,6 +12,8 @@ export EDITOR=vim
 alias l='ls -Flv'
 alias la='ls -aFlv'
 
+alias cd-ic="cd ~/Library/Mobile Documents/com~apple~CloudDocs/"
+
 alias gs="git status"
 alias ga="git add ."
 alias gc="git commit -m"

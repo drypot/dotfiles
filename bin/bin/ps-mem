@@ -1,0 +1,1 @@
+ps -awxmc -o rss,comm | sort -nr | head -20
