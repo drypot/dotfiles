@@ -11,6 +11,8 @@
 [core]
   excludesfile = /Users/drypot/.gitignore_global
   precomposeunicode = true
+  autocrlf = false
+  safecrlf = false
 
 [difftool "Kaleidoscope"]
   cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
