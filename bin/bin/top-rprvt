@@ -1,0 +1,1 @@
+top -S -r -stats pid,command,cpu,time,threads,mem,rprvt -o mem
