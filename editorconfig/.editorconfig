@@ -27,3 +27,8 @@ trim_trailing_whitespace = false
 [vimrc]
 trim_trailing_whitespace = false
 
+[*.java]
+indent_style = space
+indent_size = 4
+continuation_indent_size = 4
+
