@@ -9,7 +9,7 @@
   user = drypot
 
 [core]
-  excludesfile = /Users/drypot/.gitignore_global
+  excludesfile = ~/.gitignore_global
   precomposeunicode = true
   autocrlf = false
   safecrlf = false
@@ -47,4 +47,4 @@
   tool = vim
 
 [init]
-	defaultBranch = main
+  defaultBranch = main

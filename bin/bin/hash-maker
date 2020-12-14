@@ -1,2 +1,2 @@
 #java -jar /Users/drypot/code/java/util/drypot-util-hash/target/drypot-util-hash-1.0-SNAPSHOT.jar $*
-node ~/projects/util/make-hash/make-hash.js $*
+node ~/projects/utils/hash-maker-js/hash-maker.js $*
