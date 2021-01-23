@@ -75,8 +75,10 @@ alias 9='cd -9'
 
 alias d='dirs -v | head -10'
 
-alias l='ls -lAhG'
-alias ls='ls -AhG'
+alias l='ls -lhG'
+alias la='ls -lAhG'
+alias ll='ls -hG'
+alias lla='ls -AhG'
 
 alias le='less'
 
