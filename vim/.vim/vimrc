@@ -102,7 +102,7 @@ set hidden
 
 " Color
 " colorscheme nord
-colorscheme dim
+colorscheme grim
 syntax on
 
 " comment
