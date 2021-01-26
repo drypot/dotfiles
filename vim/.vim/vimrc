@@ -11,8 +11,8 @@ else
   call plug#begin('~/.vim/plugged')
 endif
 
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/fzf.vim'
+set rtp+=/usr/local/opt/fzf
+Plug '/usr/local/opt/fzf'
 
 Plug 'sgur/vim-editorconfig'
 
