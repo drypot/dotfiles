@@ -32,7 +32,7 @@ Plug 'markonm/traces.vim'
 Plug 'michaeljsmith/vim-indent-object'
 
 "Plug 'Yggdroot/indentLine'
-let g:indentLine_char = '|'
+"let g:indentLine_char = '|'
 
 " Plug 'scrooloose/nerdtree'
 " autocmd vimenter * NERDTree
@@ -80,8 +80,8 @@ set smarttab
 
 set textwidth=80
 
-set list
-set listchars=tab:\|\ ,trail:·
+"set list
+"set listchars=tab:\|\ ,trail:·
 
 set number
 " set relativenumber
