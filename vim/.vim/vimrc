@@ -12,7 +12,8 @@ else
 endif
 
 set rtp+=/usr/local/opt/fzf
-Plug '/usr/local/opt/fzf'
+Plug 'junegunn/fzf'
+Plug 'junegunn/fzf.vim'
 
 Plug 'sgur/vim-editorconfig'
 
@@ -30,6 +31,8 @@ let NERDTreeShowHidden=1
 
 Plug 'markonm/traces.vim'
 Plug 'michaeljsmith/vim-indent-object'
+
+Plug 'ntpeters/vim-better-whitespace'
 
 "Plug 'Yggdroot/indentLine'
 "let g:indentLine_char = '|'
@@ -105,6 +108,9 @@ set hidden
 colorscheme grim
 syntax on
 
+"hi MatchParen ctermfg=white
+hi MatchParen ctermbg=darkgray
+
 " comment
 autocmd filetype * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
@@ -136,7 +142,7 @@ let mapleader = " "
 "nnoremap <Leader>A
 "nnoremap <Leader>b
 "nnoremap <Leader>B
-nnoremap <Leader>c :cclose<CR>
+"nnoremap <Leader>c
 "nnoremap <Leader>C
 nnoremap <Leader>d :cd %:p:h<CR>:pwd<CR>
 "nnoremap <Leader>D
@@ -157,17 +163,17 @@ nnoremap <Leader>i :GFiles<CR>
 nnoremap <Leader>l :ls<CR>:b<space>
 "nnoremap <Leader>L
 "nnoremap <Leader>m
-nnoremap <Leader>M :e ~/.tmux.conf<CR>
+"nnoremap <Leader>m
 "nnoremap <Leader>n
 "nnoremap <Leader>N
-nnoremap <Leader>o :call fzf#run({'sink': 'e'})<CR>
+nnoremap <Leader>o :Files<CR>
 "nnoremap <Leader>O
 nnoremap <Leader>p :Buffers<CR>
 "nnoremap <Leader>P
 nnoremap <Leader>q :bdelete<CR>
 "nnoremap <Leader>Q
-nnoremap <Leader>r :source $MYVIMRC<CR>
-nnoremap <Leader>R :e ~/.vim/vimrc<CR>
+"nnoremap <Leader>R
+"nnoremap <Leader>r
 nnoremap <Leader>s :mksession!<CR>
 "nnoremap <Leader>S
 nnoremap <Leader>t :NERDTreeToggle<CR>
@@ -176,7 +182,7 @@ nnoremap <Leader>T :NERDTreeFind<CR>
 "nnoremap <Leader>U
 "nnoremap <Leader>v :Dirvish<CR>
 "nnoremap <Leader>V
-"nnoremap <Leader>w
+nnoremap <Leader>w :cclose<CR>
 "nnoremap <Leader>W
 "nnoremap <Leader>x
 "nnoremap <Leader>X
@@ -185,9 +191,14 @@ nnoremap <Leader>T :NERDTreeFind<CR>
 "nnoremap <Leader>z
 "nnoremap <Leader>Z
 
+nnoremap <Leader>,t :e ~/.tmux.conf<CR>
+
+nnoremap <Leader>,v :e ~/.vim/vimrc<CR>
+nnoremap <Leader>.v :source $MYVIMRC<CR>
+
 nnoremap <C-h> <C-w><C-w>
-nnoremap <C-j> :bprevious<CR>
-nnoremap <C-k> :bnext<CR>
+"nnoremap <C-j>
+"nnoremap <C-k>
 
 nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
 
@@ -198,6 +209,11 @@ nnoremap <C-w>5 :resize 50<CR>
 "vnoremap <C-c> "+y
 "nnoremap + "*
 "vnoremap + "*
+
+nnoremap S :bprevious<CR>
+vnoremap S :bprevious<CR>
+nnoremap K :bnext<CR>
+vnoremap K :bnext<CR>
 
 nnoremap Y "*y
 vnoremap Y "*y
