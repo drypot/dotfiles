@@ -1,0 +1,177 @@
+" 참고
+" from https://johngrib.github.io/wiki/config-ideavim/
+" from https://github.com/Valloric/dotfiles/blob/master/intellij/ideavimrc
+
+"set clipboard=unnamedplus,unnamed
+
+set ideamarks   " global 마크를 IntelliJ의 북마크 기능으로 사용한다.
+set surround    " tim pope의 vim-surround 에뮬레이션 기능 사용.
+set commentary  " tim pope의 commentary.vim 에뮬레이션 기능 사용.
+
+set ignorecase
+set smartcase
+set scrolloff=3         " 3 lines above/below cursor when scrolling
+set ideajoin
+
+
+" Keymaps
+
+let mapleader = " "
+
+imap jj <Esc>
+
+" Won't work in visual mode (with vmap) for some reason.
+" Use default map of <c-/> for that.
+nnoremap gcc :action CommentByLineComment<cr>
+
+" format paragraph
+vmap Q gq
+nmap Q gqap
+
+nnoremap S :bprevious<cr>
+vnoremap S :bprevious<cr>
+
+nnoremap K :bnext<cr>
+vnoremap K :bnext<cr>
+
+nnoremap Y "*y
+vnoremap Y "*y
+
+nnoremap zj o<Esc>k
+nnoremap zk O<Esc>j
+
+nnoremap == :action ReformatCode<cr>
+
+nnoremap [m :action MethodUp<cr>
+nnoremap ]m :action MethodDown<cr>
+onoremap [m :action MethodUp<cr>
+onoremap ]m :action MethodDown<cr>
+
+"nnoremap <leader>a
+"nnoremap <leader>A
+
+"nnoremap <leader>b
+"nnoremap <leader>B
+
+nnoremap <leader>b :action Back<cr>
+
+"nnoremap <leader>c
+"nnoremap <leader>C
+
+
+"nnoremap <leader>d :cd %:p:h<cr>:pwd<CR>
+"nnoremap <leader>D
+
+nnoremap <leader>d :action ShowErrorDescription<cr>
+
+"nnoremap <leader>e :e.<cr>
+"nnoremap <leader>E
+
+nnoremap <leader>e :action ActivateProjectToolWindow<cr>
+
+"nnoremap <leader>f
+"nnoremap <leader>F
+
+nnoremap <leader>f :action Forward<cr>
+
+"nnoremap <leader>g :silent grep<Space>
+"nnoremap <leader>G
+
+nnoremap <leader>gd :action GotoDeclaration<cr>
+nnoremap <leader>gc :action GotoClass<cr>
+
+nnoremap <leader>h :action HideAllWindows<cr>
+"nnoremap <leader>H
+
+"nnoremap <leader>i :GFiles<cr>
+"nnoremap <leader>I
+
+"nnoremap <leader>j
+"nnoremap <leader>J
+
+"nnoremap <leader>k
+"nnoremap <leader>K
+
+"nnoremap <leader>l :ls<cr>:b<space>
+"nnoremap <leader>L
+
+"nnoremap <leader>m
+"nnoremap <leader>m
+
+"nnoremap <leader>n
+"nnoremap <leader>N
+
+nnoremap <leader>ns :action GotoSymbol<cr>
+nnoremap <leader>nm :action FileStructurePopup<cr>
+
+"nnoremap <leader>o :Files<cr>
+"nnoremap <leader>O
+
+nnoremap <leader>p "*p
+"nnoremap <leader>P
+
+"nnoremap <leader>q :bdelete<cr>
+"nnoremap <leader>Q
+
+"nnoremap <leader>r
+"nnoremap <leader>R
+
+"nnoremap <leader>s :mksession!<cr>
+"nnoremap <leader>S
+
+" Switches between .cc and .h file!
+nnoremap <leader>s :action GotoRelated<cr>
+
+nnoremap <leader>t :action VimFindActionIdAction<cr>
+"nnoremap <leader>T :NERDTreeFind<cr>
+
+nnoremap <leader>t :action GotoFile<cr>
+
+nnoremap <leader>u :action Switcher<cr>
+"nnoremap <leader>U
+
+"nnoremap <leader>v :Dirvish<cr>
+"nnoremap <leader>V
+
+"nnoremap <leader>w
+"nnoremap <leader>W
+
+"nnoremap <leader>x :cclose<cr>
+"nnoremap <leader>X
+
+nnoremap <leader>y "*y
+"nnoremap <leader>Y
+
+"nnoremap <leader>z
+"nnoremap <leader>Z
+
+nnoremap <leader>,t :e ~/.tmux.conf<cr>
+nnoremap <leader>,i :e ~/.config/ideavim/ideavimrc<cr>
+nnoremap <leader>,v :e ~/.vim/vimrc<cr>
+
+nnoremap <leader>.i :source ~/.config/ideavim/ideavimrc<cr>
+"nnoremap <leader>.v :source $MYVIMRC<cr>
+
+nnoremap <Tab>d :action QuickJavaDoc<CR>
+nnoremap <Tab>f :action QuickFixes<CR>
+nnoremap <Tab>o :action CloseAllEditorsButActive<CR>
+nnoremap <Tab>i :action InspectCode<CR>
+nnoremap <Tab>u :action FindUsages<CR>
+
+"nnoremap <C-h> <C-w><C-w>
+"nnoremap <C-j>
+"nnoremap <C-k>
+
+"nnoremap <silent> <C-l> :<C-u>nohlsearch<cr><C-l>
+
+"nnoremap <C-w>3 :resize 30<cr>
+"nnoremap <C-w>4 :resize 40<cr>
+"nnoremap <C-w>5 :resize 50<cr>
+
+"vnoremap <C-c> "+y
+"nnoremap + "*
+"vnoremap + "*
+
+" IdeaVim uses 'a' for alt instead of Vim's 'm'
+nmap <a-n> 15gj
+nmap <a-p> 15gk

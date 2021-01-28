@@ -52,6 +52,29 @@ Plug 'ntpeters/vim-better-whitespace'
 
 call plug#end()
 
+" fzf
+let $FZF_DEFAULT_COMMAND= 'rg --files'
+let g:fzf_layout = { 'down': '~100%' }
+
+" netrw
+let g:netrw_liststyle = 3
+let g:netrw_banner = 0
+let g:netrw_list_hide= '.DS_Store'
+
+"grep
+"set grepprg=rg\ --vimgrep\ --no-heading\ --smart-case
+set grepprg=rg\ --vimgrep\ --no-heading
+
+" match
+"runtime macros/matchit.vim
+
+" colorscheme nord
+colorscheme grim
+syntax on
+
+"set clipboard=unnamed
+
+set mouse=a
 
 set nobackup
 set nowritebackup
@@ -70,10 +93,6 @@ set statusline+=%=        "right align remainder
 set statusline+=%-14.(%l,%c%V%)\   "line, char
 set statusline+=%P        "file position
 
-"set clipboard=unnamed
-
-set mouse=a
-
 set tabstop=2
 set autoindent
 set nocindent
@@ -81,32 +100,29 @@ set shiftwidth=2
 set expandtab
 set smarttab
 
-set textwidth=80
+"set textwidth=80
 
-"set list
-"set listchars=tab:\|\ ,trail:·
+set nowrap
 
 set number
-" set relativenumber
+"set relativenumber
 
 set cursorline
 "set cursorcolumn
 
-set nowrap
+"set list
+"set listchars=tab:\|\ ,trail:·
 
 set selection=exclusive
 
+set ignorecase
+set smartcase
+
 set hlsearch
 set incsearch
-" set nowrapscan
+"set nowrapscan
 
-" Buffers
 set hidden
-
-" Color
-" colorscheme nord
-colorscheme grim
-syntax on
 
 "hi MatchParen ctermfg=white
 hi MatchParen ctermbg=darkgray
@@ -117,83 +133,110 @@ autocmd filetype * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 autocmd quickfixcmdpost [^l]* nested cwindow
 autocmd quickfixcmdpost    l* nested lwindow
 
-" fzf
-let $FZF_DEFAULT_COMMAND= 'rg --files'
-let g:fzf_layout = { 'down': '~100%' }
-
-" netrw
-let g:netrw_liststyle = 3
-let g:netrw_banner = 0
-let g:netrw_list_hide= '.DS_Store'
-
-"grep
-"set grepprg=rg\ --vimgrep\ --no-heading\ --smart-case
-set grepprg=rg\ --vimgrep\ --no-heading
-
-" match
-"runtime macros/matchit.vim
-
 
 " Keymaps
 
 let mapleader = " "
 
+imap jj <Esc>
+
+" format paragraph
+vmap Q gq
+nmap Q gqap
+
+nnoremap S :bprevious<CR>
+vnoremap S :bprevious<CR>
+
+nnoremap K :bnext<CR>
+vnoremap K :bnext<CR>
+
+nnoremap Y "*y
+vnoremap Y "*y
+
+nnoremap zj o<Esc>k
+nnoremap zk O<Esc>j
+
 "nnoremap <Leader>a
 "nnoremap <Leader>A
+
 "nnoremap <Leader>b
 "nnoremap <Leader>B
+
 "nnoremap <Leader>c
 "nnoremap <Leader>C
+
 nnoremap <Leader>d :cd %:p:h<CR>:pwd<CR>
 "nnoremap <Leader>D
+
 nnoremap <Leader>e :e.<CR>
 "nnoremap <Leader>E
+
 "nnoremap <Leader>f
 "nnoremap <Leader>F
+
 nnoremap <Leader>g :silent grep<Space>
 "nnoremap <Leader>G
+
 nnoremap <Leader>h :buffer #<CR>
 "nnoremap <Leader>H
+
 nnoremap <Leader>i :GFiles<CR>
 "nnoremap <Leader>I
+
 "nnoremap <Leader>j
 "nnoremap <Leader>J
+
 "nnoremap <Leader>k
 "nnoremap <Leader>K
+
 nnoremap <Leader>l :ls<CR>:b<space>
 "nnoremap <Leader>L
+
 "nnoremap <Leader>m
 "nnoremap <Leader>m
+
 "nnoremap <Leader>n
 "nnoremap <Leader>N
+
 nnoremap <Leader>o :Files<CR>
 "nnoremap <Leader>O
-nnoremap <Leader>p :Buffers<CR>
+
+nnoremap <Leader>p "*p
 "nnoremap <Leader>P
+
 nnoremap <Leader>q :bdelete<CR>
 "nnoremap <Leader>Q
-"nnoremap <Leader>R
+
 "nnoremap <Leader>r
+"nnoremap <Leader>R
+
 nnoremap <Leader>s :mksession!<CR>
 "nnoremap <Leader>S
+
 nnoremap <Leader>t :NERDTreeToggle<CR>
 nnoremap <Leader>T :NERDTreeFind<CR>
-"nnoremap <Leader>u
+
+nnoremap <Leader>u :Buffers<CR>
 "nnoremap <Leader>U
+
 "nnoremap <Leader>v :Dirvish<CR>
 "nnoremap <Leader>V
-nnoremap <Leader>w :cclose<CR>
+
+"nnoremap <Leader>w
 "nnoremap <Leader>W
-"nnoremap <Leader>x
+
+nnoremap <Leader>x :cclose<CR>
 "nnoremap <Leader>X
-"nnoremap <Leader>y
+
+nnoremap <Leader>y "*y
 "nnoremap <Leader>Y
+
 "nnoremap <Leader>z
 "nnoremap <Leader>Z
 
 nnoremap <Leader>,t :e ~/.tmux.conf<CR>
-
 nnoremap <Leader>,v :e ~/.vim/vimrc<CR>
+
 nnoremap <Leader>.v :source $MYVIMRC<CR>
 
 nnoremap <C-h> <C-w><C-w>
@@ -209,14 +252,4 @@ nnoremap <C-w>5 :resize 50<CR>
 "vnoremap <C-c> "+y
 "nnoremap + "*
 "vnoremap + "*
-
-nnoremap S :bprevious<CR>
-vnoremap S :bprevious<CR>
-nnoremap K :bnext<CR>
-vnoremap K :bnext<CR>
-
-nnoremap Y "*y
-vnoremap Y "*y
-
-imap jj <Esc>
 
