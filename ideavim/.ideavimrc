@@ -2,11 +2,14 @@
 " from https://johngrib.github.io/wiki/config-ideavim/
 " from https://github.com/Valloric/dotfiles/blob/master/intellij/ideavimrc
 
+set keep-english-in-normal
+
 "set clipboard=unnamedplus,unnamed
 
 set ideamarks   " global 마크를 IntelliJ의 북마크 기능으로 사용한다.
 set surround    " tim pope의 vim-surround 에뮬레이션 기능 사용.
 set commentary  " tim pope의 commentary.vim 에뮬레이션 기능 사용.
+set easymotion
 
 set ignorecase
 set smartcase
@@ -28,11 +31,19 @@ nnoremap gcc :action CommentByLineComment<cr>
 vmap Q gq
 nmap Q gqap
 
-nnoremap S :bprevious<cr>
-vnoremap S :bprevious<cr>
+nmap sl <Plug>(easymotion-lineforward)
+nmap sj <Plug>(easymotion-j)
+nmap sk <Plug>(easymotion-k)
+nmap sh <Plug>(easymotion-linebackward)
+nmap sa <Plug>(easymotion-jumptoanywhere)
+nmap sf <Plug>(easymotion-f)
 
-nnoremap K :bnext<cr>
-vnoremap K :bnext<cr>
+nnoremap S :previous<cr>
+vnoremap S :previous<cr>
+
+nnoremap K :next<cr>
+
+vnoremap K :next<cr>
 
 nnoremap Y "*y
 vnoremap Y "*y
@@ -145,24 +156,24 @@ nnoremap <leader>y "*y
 "nnoremap <leader>z
 "nnoremap <leader>Z
 
-nnoremap <leader>,t :e ~/.tmux.conf<cr>
-nnoremap <leader>,i :e ~/.config/ideavim/ideavimrc<cr>
-nnoremap <leader>,v :e ~/.vim/vimrc<cr>
+nnoremap <tab>oi :e ~/.ideavimrc<cr>
+nnoremap <tab>ot :e ~/.tmux.conf<cr>
+nnoremap <tab>ov :e ~/.vim/vimrc<cr>
 
-nnoremap <leader>.i :source ~/.config/ideavim/ideavimrc<cr>
-"nnoremap <leader>.v :source $MYVIMRC<cr>
+nnoremap <tab>, :e ~/.ideavimrc<cr>
+nnoremap <tab>. :source ~/.ideavimrc<cr>
 
 nnoremap <Tab>d :action QuickJavaDoc<CR>
 nnoremap <Tab>f :action QuickFixes<CR>
-nnoremap <Tab>o :action CloseAllEditorsButActive<CR>
 nnoremap <Tab>i :action InspectCode<CR>
 nnoremap <Tab>u :action FindUsages<CR>
+nnoremap <Tab>w :action CloseAllEditorsButActive<CR>
 
 "nnoremap <C-h> <C-w><C-w>
 "nnoremap <C-j>
 "nnoremap <C-k>
 
-"nnoremap <silent> <C-l> :<C-u>nohlsearch<cr><C-l>
+nnoremap <silent> <C-l> :<C-u>nohlsearch<cr><C-l>
 
 "nnoremap <C-w>3 :resize 30<cr>
 "nnoremap <C-w>4 :resize 40<cr>
@@ -173,5 +184,5 @@ nnoremap <Tab>u :action FindUsages<CR>
 "vnoremap + "*
 
 " IdeaVim uses 'a' for alt instead of Vim's 'm'
-nmap <a-n> 15gj
-nmap <a-p> 15gk
+"nmap <a-n> 15gj
+"nmap <a-p> 15gk

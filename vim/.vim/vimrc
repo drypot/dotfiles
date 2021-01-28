@@ -15,6 +15,8 @@ set rtp+=/usr/local/opt/fzf
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 
+Plug 'easymotion/vim-easymotion'
+
 Plug 'sgur/vim-editorconfig'
 
 Plug 'arcticicestudio/nord-vim'
@@ -144,14 +146,20 @@ imap jj <Esc>
 vmap Q gq
 nmap Q gqap
 
+nmap sl <Plug>(easymotion-lineforward)
+nmap sj <Plug>(easymotion-j)
+nmap sk <Plug>(easymotion-k)
+nmap sh <Plug>(easymotion-linebackward)
+nmap sa <Plug>(easymotion-jumptoanywhere)
+nmap sf <Plug>(easymotion-f)
+
 nnoremap S :bprevious<CR>
 vnoremap S :bprevious<CR>
 
 nnoremap K :bnext<CR>
 vnoremap K :bnext<CR>
 
-nnoremap Y "*y
-vnoremap Y "*y
+nnoremap Y y$
 
 nnoremap zj o<Esc>k
 nnoremap zk O<Esc>j
@@ -234,10 +242,12 @@ nnoremap <Leader>y "*y
 "nnoremap <Leader>z
 "nnoremap <Leader>Z
 
-nnoremap <Leader>,t :e ~/.tmux.conf<CR>
-nnoremap <Leader>,v :e ~/.vim/vimrc<CR>
+nnoremap <tab>oi :e ~/.ideavimrc<cr>
+nnoremap <tab>ot :e ~/.tmux.conf<cr>
+nnoremap <tab>ov :e ~/.vim/vimrc<cr>
 
-nnoremap <Leader>.v :source $MYVIMRC<CR>
+nnoremap <tab>, :e $MYVIMRC<cr>
+nnoremap <tab>. :source $MYVIMRC<cr>
 
 nnoremap <C-h> <C-w><C-w>
 "nnoremap <C-j>
