@@ -93,7 +93,7 @@ case "$OSTYPE" in
     export JAVA_HOME=`/usr/libexec/java_home`
   ;;
   linux*)
-    # ...
+    export JAVA_HOME=/usr/lib/jvm/default
   ;;
   dragonfly*|freebsd*|netbsd*|openbsd*)
     # ...
