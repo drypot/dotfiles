@@ -102,3 +102,7 @@ esac
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+# for arch linux 2021-02-08
+[ -f /usr/share/fzf/completion.zsh ] && source /usr/share/fzf/completion.zsh
+[ -f /usr/share/fzf/key-bindings.zsh ] && source /usr/share/fzf/key-bindings.zsh
+
