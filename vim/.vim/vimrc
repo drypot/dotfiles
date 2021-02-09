@@ -127,7 +127,7 @@ set incsearch
 set hidden
 
 "hi MatchParen ctermfg=white
-hi MatchParen ctermbg=black
+"hi MatchParen ctermbg=cyan
 
 " comment
 autocmd filetype * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
