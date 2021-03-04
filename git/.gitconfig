@@ -27,7 +27,7 @@
     default = simple
 
 [credential]
-    helper = osxkeychain
+    #helper = osxkeychain
     helper = cache --timeout 7200
     #helper = store
 
