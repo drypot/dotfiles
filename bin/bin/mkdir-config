@@ -1,0 +1,2 @@
+mkdir -p ~/.config/environment.d
+mkdir -p ~/.config/systemd/user
