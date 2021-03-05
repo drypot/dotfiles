@@ -13,3 +13,9 @@ And stow, stow, stow.
     .
     .
 
+## Linux
+
+stow 하기 전에 ~/.config 디렉토리 구조를 만든다.
+
+    ~/bin/mkdir-config
+
