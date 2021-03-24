@@ -27,9 +27,9 @@
     default = simple
 
 [credential]
-    #helper = osxkeychain
-    helper = cache --timeout 7200
-    #helper = store
+    helper = osxkeychain
+    helper = store
+    #helper = cache --timeout 7200
 
 [filter "lfs"]
     smudge = git-lfs smudge -- %f
