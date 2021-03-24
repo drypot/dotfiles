@@ -40,11 +40,7 @@ tab_width = 4
 indent_size = 2
 tab_width = 2
 
-[*.js]
-indent_size = 2
-tab_width = 2
-
-[*.json]
+[*.{js,json,ts,pug}]
 indent_size = 2
 tab_width = 2
 
