@@ -27,12 +27,12 @@ keycode 37 = Control_L
 keycode 133 = Alt_L
 keycode 64 = Control_L
 
-!keycode 108 = Control_R
-!keycode 105 = Alt_R
-!keycode 90 = Super_L
+keycode 108 = Control_R
+keycode 105 = Alt_R
+keycode 90 = Super_L
 
-keycode 108 = Super_L
-keycode 105 = Control_R
+!keycode 108 = Control_L
+!keycode 105 = Super_L
 
 add control = Control_L Control_R
 add mod1 = Alt_L Alt_R Meta_L
