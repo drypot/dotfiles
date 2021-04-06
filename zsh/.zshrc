@@ -33,6 +33,7 @@ path=(
   /usr/local/sbin
   $path
   $HOME/bin
+  $HOME/bin-local
 )
 
 autoload -U colors && colors
