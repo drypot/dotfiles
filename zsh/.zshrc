@@ -78,8 +78,6 @@ alias d='dirs -v | head -10'
 
 alias l='ls -lhF'
 alias la='ls -lAhF'
-alias ll='ls -hF'
-alias lla='ls -AhF'
 
 alias le='less'
 
