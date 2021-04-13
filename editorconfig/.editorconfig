@@ -36,7 +36,7 @@ tab_width = 4
 indent_size = 4
 tab_width = 4
 
-[*.{html,css}]
+[*.{html,css,scss}]
 indent_size = 2
 tab_width = 2
 
