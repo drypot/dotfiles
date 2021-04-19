@@ -1,26 +1,25 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-#PS1="\h:\w:"
-PS1="\w$"
+PS1='\u@\h \w$ '
 
 export LANG=en_US.UTF-8
 
 export VISUAL=vim
 export EDITOR=vim
+export PAGER='less'
 
-alias l='ls -Flv'
-alias la='ls -aFlv'
+alias l='ls -lhF'
+alias la='ls -lAhF'
 
 alias cd-ic="cd ~/Library/Mobile Documents/com~apple~CloudDocs/"
 
 alias gs="git status"
 alias ga="git add ."
 alias gc="git commit -m"
-alias gd="git diff"
 
 if [ -f /usr/local/etc/bash_completion.d/git-completion.bash ]; then
-	. /usr/local/etc/bash_completion.d/git-completion.bash
+  . /usr/local/etc/bash_completion.d/git-completion.bash
 fi
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
