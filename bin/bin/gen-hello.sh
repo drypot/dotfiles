@@ -1,4 +1,4 @@
-TEMPLATE=~/projects/hello-template/hello-template
+TEMPLATE=~/projects/hello-template
 TAR=${1:-.}
 [ ! -d $TAR ] && mkdir $TAR
 cp ${TEMPLATE}/LICENSE $TAR
