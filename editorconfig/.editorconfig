@@ -42,7 +42,11 @@ tab_width = 4
 indent_size = 2
 tab_width = 2
 
-[*.{js,json,ts,pug}]
+[*.{js,cjs,mjs,json,ts}]
+indent_size = 2
+tab_width = 2
+
+[*.{pug,vue,jsx,tsx}]
 indent_size = 2
 tab_width = 2
 
