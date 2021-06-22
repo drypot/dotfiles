@@ -166,28 +166,28 @@ nnoremap zk O<Esc>j
 "nnoremap <Leader>a
 "nnoremap <Leader>A
 
-"nnoremap <Leader>b
-"nnoremap <Leader>B
+nnoremap <Leader>b :buffer #<CR>
+nnoremap <Leader>B :Buffers<CR>
 
-"nnoremap <Leader>c
+nnoremap <Leader>c :cd %:p:h<CR>:pwd<CR>
 "nnoremap <Leader>C
 
-nnoremap <Leader>d :cd %:p:h<CR>:pwd<CR>
+nnoremap <Leader>d :bdelete<CR>
 "nnoremap <Leader>D
 
 nnoremap <Leader>e :e.<CR>
 "nnoremap <Leader>E
 
 "nnoremap <Leader>f
-"nnoremap <Leader>F
+nnoremap <Leader>F :Files<CR>
 
 nnoremap <Leader>g :silent grep<Space>
-"nnoremap <Leader>G
+nnoremap <Leader>G :GFiles<CR>
 
-nnoremap <Leader>h :buffer #<CR>
+"nnoremap <Leader>h
 "nnoremap <Leader>H
 
-nnoremap <Leader>i :GFiles<CR>
+"nnoremap <Leader>i
 "nnoremap <Leader>I
 
 "nnoremap <Leader>j
@@ -199,31 +199,31 @@ nnoremap <Leader>i :GFiles<CR>
 nnoremap <Leader>l :ls<CR>:b<space>
 "nnoremap <Leader>L
 
-"nnoremap <Leader>m
-"nnoremap <Leader>m
+nnoremap <Leader>m :mksession!<CR>
+"nnoremap <Leader>M
 
-"nnoremap <Leader>n
-"nnoremap <Leader>N
+nnoremap <Leader>n :NERDTreeToggle<CR>
+nnoremap <Leader>N :NERDTreeFind<CR>
 
-nnoremap <Leader>o :Files<CR>
+"nnoremap <Leader>o
 "nnoremap <Leader>O
 
 nnoremap <Leader>p "*p
 "nnoremap <Leader>P
 
-nnoremap <Leader>q :bdelete<CR>
+"nnoremap <Leader>q
 "nnoremap <Leader>Q
 
 "nnoremap <Leader>r
 "nnoremap <Leader>R
 
-nnoremap <Leader>s :mksession!<CR>
+"nnoremap <Leader>s
 "nnoremap <Leader>S
 
-nnoremap <Leader>t :NERDTreeToggle<CR>
-nnoremap <Leader>T :NERDTreeFind<CR>
+"nnoremap <Leader>t
+"nnoremap <Leader>T
 
-nnoremap <Leader>u :Buffers<CR>
+"nnoremap <Leader>u
 "nnoremap <Leader>U
 
 "nnoremap <Leader>v :Dirvish<CR>
