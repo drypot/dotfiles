@@ -1,2 +1,2 @@
-TEMPLATE=~/projects/hello-template
+TEMPLATE=~/project/hello-template
 cp ${TEMPLATE}/.editorconfig .

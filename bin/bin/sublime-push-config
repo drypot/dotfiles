@@ -1,2 +1,2 @@
-tar -czf ~/Dropbox/sublime-text/pref.tar.gz -C ~/Library/Application\ Support/Sublime\ Text\ 3 Installed\ Packages Packages
+tar -czf ~/Documents/Config/SublimeText/pref.tar.gz -C ~/Library/Application\ Support/Sublime\ Text\ 3 Installed\ Packages Packages
 

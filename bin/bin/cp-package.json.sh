@@ -1,2 +1,2 @@
-TEMPLATE=~/projects/hello-node
+TEMPLATE=~/project/hello-node
 cp ${TEMPLATE}/package.json .
