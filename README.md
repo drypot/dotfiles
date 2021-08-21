@@ -2,16 +2,20 @@
 
 Clone this repository to ~/dotfiles.
 
-Install stow.
+## Stow
 
-And stow, stow, stow.
+Make links.
 
-    cd dotfiles
-    stow bash
-    stow git
-    .
-    .
-    .
+    $ cd dotfiles
+    $ stow bash
+    $ stow git
+    ...
+
+Remove links.
+
+    $ cd dotfiles
+    $ stow -D bash
+    ...
 
 ## Linux
 
