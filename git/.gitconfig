@@ -49,5 +49,7 @@
 
 [init]
     defaultBranch = main
+
 [pull]
-	ff = only
+  ff = only
+
