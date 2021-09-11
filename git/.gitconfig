@@ -17,11 +17,15 @@
 [difftool "Kaleidoscope"]
     cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
 
+[difftool "sourcetree"]
+    cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+    path =
+
 [difftool]
     prompt = false
 
 [diff]
-    tool = Kaleidoscope
+    tool= Kaleidoscope
 
 [push]
     default = simple
@@ -37,10 +41,6 @@
     required = true
     clean = git-lfs clean -- %f
 
-[difftool "sourcetree"]
-    cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-    path =
-
 [commit]
     template = /Users/drypot/.stCommitMsg
 
@@ -52,5 +52,3 @@
 
 [pull]
   ff = only
-
-
