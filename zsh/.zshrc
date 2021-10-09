@@ -87,6 +87,14 @@ alias gc="git commit -m"
 
 alias g="./gradlew"
 
+function node-env-development() {
+  unset NODE_ENV
+}
+
+function node-env-production() {
+  export NODE_ENV=production
+}
+
 case "$OSTYPE" in
   darwin*)
     export JAVA_HOME=`/usr/libexec/java_home`
