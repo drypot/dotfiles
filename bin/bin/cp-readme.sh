@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 TEMPLATE=~/project/hello-template
 cp ${TEMPLATE}/README.md .
 cp ${TEMPLATE}/LICENSE .

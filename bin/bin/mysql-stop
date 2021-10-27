@@ -1,1 +1,3 @@
-brew services stop mariadb
+#!/usr/bin/env bash
+
+brew services stop mysql

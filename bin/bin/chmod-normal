@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 find . -type d -exec chmod 755 {} \;
 find . ! -type d -exec chmod 644 {} \;

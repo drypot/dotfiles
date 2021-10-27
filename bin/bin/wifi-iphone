@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 sudo ifconfig en0 ether 28:E1:4C:DA:F2:71
 sudo ifconfig en0 down
 sudo ifconfig en0 up

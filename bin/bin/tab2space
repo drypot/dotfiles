@@ -1,9 +1,9 @@
+#!/usr/bin/env bash
+
 find "$1" -name "$2" | while read filename
 do
-
   tempName=${filename}~temp~.txt
   mv "$filename" "$tempName"
   expand -t 2 "$tempName" > "$filename"
   rm "$tempName"
-
 done

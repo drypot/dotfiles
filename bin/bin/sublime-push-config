@@ -1,2 +1,4 @@
+#!/usr/bin/env bash
+
 tar -czf ~/Documents/Config/SublimeText/pref.tar.gz -C ~/Library/Application\ Support/Sublime\ Text\ 3 Installed\ Packages Packages
 

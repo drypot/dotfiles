@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 mkdir -p ~/.config/environment.d
 mkdir -p ~/.config/systemd/user
 mkdir -p ~/.config/autostart

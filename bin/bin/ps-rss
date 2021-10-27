@@ -1,1 +1,3 @@
+#!/usr/bin/env bash
+
 ps -awxmc -o rss,vsize,pmem,comm | sort -nr | head -20

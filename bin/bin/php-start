@@ -1,4 +1,0 @@
-brew services start nginx
-brew services start php70
-#brew services start mongodb
-#brew services start redis
