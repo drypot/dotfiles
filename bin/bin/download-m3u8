@@ -2,5 +2,5 @@
 
 TO="${2:-video.mp4}"
 
-#ffmpeg -protocol_whitelist file,http,https,tcp,tls,crypto -i "$1" -c copy v"$TO"
-echo ffmpeg -protocol_whitelist file,http,https,tcp,tls,crypto -i "$1" -c copy "$TO"
+echo ffmpeg -protocol_whitelist file,http,https,tcp,tls,crypto -i "$1" -c copy v"$TO"
+ffmpeg -protocol_whitelist file,http,https,tcp,tls,crypto -i "$1" -c copy v"$TO"
