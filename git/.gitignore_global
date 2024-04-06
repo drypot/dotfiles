@@ -24,3 +24,6 @@ out/
 
 ### Sublime Text ###
 *.sublime-workspace
+
+## Xcode
+xcuserdata/
