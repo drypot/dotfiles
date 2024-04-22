@@ -28,6 +28,9 @@ unsetopt beep
 #cdpath=($HOME)
 cdpath=()
 
+# mac homebrew 설치하면 .zprofile 에 homebrew 설정을 넣도록 권장되고 있다.
+# homebrew 설정은 homebrew 가이드 대로 .zprofile 에서 세팅하는 것으로
+
 path=(
   /usr/local/bin
   /usr/local/sbin
