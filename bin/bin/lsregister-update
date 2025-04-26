@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+
+# 최근 빌드된 .app 찾기
+APP_PATH=$(find ~/Library/Developer/Xcode/DerivedData -path '*/Build/Products/Debug/*.app' -type d -print0 2>/dev/null | xargs -0 ls -td | head -n 1)
+
+if [ -z "$APP_PATH" ]; then
+    echo "app not found."
+    exit 1
+fi
+
+set -x
+/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -f "$APP_PATH"
+set +x
+
+#echo "update LaunchServices all"
+#/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user
+
+#echo "restart finder"
+#killall Finder
+
