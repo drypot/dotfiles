@@ -12,9 +12,3 @@ set -x
 /System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -f "$APP_PATH"
 set +x
 
-#echo "update LaunchServices all"
-#/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user
-
-#echo "restart finder"
-#killall Finder
-
