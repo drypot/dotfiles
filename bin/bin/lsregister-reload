@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
 
+#/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister \
+#  -kill -r -apps system,local,user
+
 /System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister \
-  -kill -r -apps system,local,user
+ -kill -r -domain local -domain system -domain user
