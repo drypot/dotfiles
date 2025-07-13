@@ -1,17 +1,21 @@
 
+# echo "running: .bash_profile"
+
+export PATH
+
 if [ -x /opt/homebrew/bin/brew ]; then
     eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 
 add_path_pre() {
   if [ -d "$1" ]; then
-    export PATH="$1:$PATH"
+    PATH="$1:$PATH"
   fi
 }
 
 add_path_post() {
   if [ -d "$1" ]; then
-    export PATH="$PATH:$1"
+    PATH="$PATH:$1"
   fi
 }
 

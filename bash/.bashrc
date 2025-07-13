@@ -1,5 +1,8 @@
+
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
+
+# echo "running: .bashrc"
 
 PS1='\[\e[33m\]\u@\h \w\[\e[0m\]$ '
 
