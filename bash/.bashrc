@@ -1,7 +1,7 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-PS1='\u@\h \w$ '
+PS1='\[\e[33m\]\u@\h \w\[\e[0m\]$ '
 
 export LANG=en_US.UTF-8
 
@@ -12,7 +12,7 @@ export PAGER='less'
 alias l='ls -lhF'
 alias la='ls -lAhF'
 
-alias cd-ic="cd ~/Library/Mobile Documents/com~apple~CloudDocs/"
+alias le='less'
 
 alias gs="git status"
 alias ga="git add ."
