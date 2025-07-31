@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+args=(
+#  --defaults-file=/opt/homebrew/etc/my.cnf
+#  --datadir=/opt/homebrew/var/mysql
+)
+
+set -x # Enable debugging output
+
+/opt/homebrew/bin/mysqld "${args[@]}" "$@"
