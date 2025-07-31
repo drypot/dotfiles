@@ -1,1 +1,10 @@
-/opt/homebrew/opt/redis/bin/redis-server /opt/homebrew/etc/redis.conf
+#!/usr/bin/env bash
+
+args=(
+  /opt/homebrew/etc/redis.conf
+  --save ""
+)
+
+set -x # Enable debugging output
+
+/opt/homebrew/bin/redis-server "${args[@]}" "$@"
