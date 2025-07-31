@@ -1,0 +1,2 @@
+#/opt/homebrew/opt/mysql/bin/mysqld_safe --datadir\=/opt/homebrew/var/mysql
+/opt/homebrew/opt/mysql/bin/mysqld --datadir\=/opt/homebrew/var/mysql

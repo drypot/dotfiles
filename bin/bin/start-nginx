@@ -1,0 +1,2 @@
+#/opt/homebrew/opt/nginx/bin/nginx -g daemon\ off\;
+/opt/homebrew/bin/nginx -c $HOME/project/nginx-conf-mac/nginx.conf -g daemon\ off\;
