@@ -13,12 +13,13 @@ add_path_if_exists() {
   fi
 }
 
-PATH="$PATH:$HOME/.local/bin"
-PATH="$PATH:$HOME/.cargo/bin"
+add_path_if_exists "$HOME/.local/bin"
+add_path_if_exists "$HOME/.cargo/bin"
 
 add_path_if_exists "$HOME/Library/Application Support/JetBrains/Toolbox/scripts"
+add_path_if_exists "$HOME/.fzf/bin"
 
-PATH="$PATH:$HOME/bin"
-PATH="$PATH:$HOME/bin-local"
+add_path_if_exists "$HOME/bin"
+add_path_if_exists "$HOME/bin-local"
 
 [[ -f ~/.bashrc ]] && . ~/.bashrc

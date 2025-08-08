@@ -7,20 +7,17 @@ if [ -x /opt/homebrew/bin/brew ]; then
     eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 
-add_path_pre() {
-  if [ -d "$1" ]; then
-    PATH="$1:$PATH"
-  fi
-}
-
-add_path_post() {
+add_path_if_exists() {
   if [ -d "$1" ]; then
     PATH="$PATH:$1"
   fi
 }
 
-add_path_post "$HOME/bin"
-add_path_post "$HOME/bin-local"
+add_path_if_exists "$HOME/.local/bin"
+add_path_if_exists "$HOME/.cargo/bin"
 
-add_path_post "$HOME/.cargo/bin"
-add_path_post "$HOME/Library/Application Support/JetBrains/Toolbox/scripts"
+add_path_if_exists "$HOME/Library/Application Support/JetBrains/Toolbox/scripts"
+add_path_if_exists "$HOME/.fzf/bin"
+
+add_path_if_exists "$HOME/bin"
+add_path_if_exists "$HOME/bin-local"
