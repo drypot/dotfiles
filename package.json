@@ -1,0 +1,23 @@
+{
+  "name": "dotfiles",
+  "version": "0.0.1",
+  "description": "Clone this repository to ~/dotfiles.",
+  "homepage": "https://github.com/drypot/dotfiles#readme",
+  "bugs": {
+    "url": "https://github.com/drypot/dotfiles/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/drypot/dotfiles.git"
+  },
+  "license": "MIT",
+  "author": "Kyuhyun Park <drypot@gmail.com> (https://drypot.github.io)",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "@types/node": "^24.2.1"
+  }
+}
