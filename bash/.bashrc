@@ -5,7 +5,7 @@
 # echo "running: .bashrc"
 
 #PS1='\[\e[33m\]\u@\h \w\[\e[0m\]$ '
-PS1='\[\e[33m\]\h \w\[\e[0m\] $ '
+PS1='\[\e[33m\]\h \w\[\e[0m\] '
 
 export LANG=en_US.UTF-8
 
