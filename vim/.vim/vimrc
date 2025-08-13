@@ -69,8 +69,9 @@ set grepprg=rg\ --vimgrep\ --no-heading
 " match
 "runtime macros/matchit.vim
 
-" colorscheme nord
-colorscheme grim
+"colorscheme nord
+"colorscheme grim
+colorscheme default
 syntax on
 
 "set clipboard=unnamed
