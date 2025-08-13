@@ -237,6 +237,7 @@ nnoremap <Leader>x :cclose<CR>
 "nnoremap <Leader>X
 
 nnoremap <Leader>y "*y
+vnoremap <Leader>y "*y
 "nnoremap <Leader>Y
 
 "nnoremap <Leader>z
