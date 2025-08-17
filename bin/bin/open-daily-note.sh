@@ -7,7 +7,7 @@ set -euo pipefail
 # -o pipefail  : 파이프라인의 종료코드를 마지막 명령이 아니라, 실패한 명령의 코드로 만든다.
 #                파이프라인 내부에서 실패를 잡으려면 반드시 pipefail을 켜라고 한다.
 
-basedir="$HOME/Documents/Memo/Diary/Diary"
+basedir="$HOME/Documents/Memo/Diary"
 
 fmt="%Y/%m/%Y-%m-%d_%a.md"
 relpath="$(LC_TIME=C date +"$fmt")"
